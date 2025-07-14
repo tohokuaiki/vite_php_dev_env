@@ -43,6 +43,7 @@ const cacheRegexps: RegExp[] = [
 // https://vite.dev/config/
 export default defineConfig({
   root: path.resolve(__dirname, 'src'),
+  publicDir: '../public',
   envDir: '../',
   plugins: [react(), ViteEjsPlugin(), NotFoundPlugin(), CacheBusting(cacheRegexps)],
   build: {
